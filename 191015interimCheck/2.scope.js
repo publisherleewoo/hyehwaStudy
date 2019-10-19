@@ -19,15 +19,15 @@
 
 
 
-// var value = "value1";
+var value = "value1";
 
-// function printValue(){
-//     return value
-// }
+function printValue(){
+    return value
+}
 
-// function printFunc(func){
-//     var value = "value2";
-//     console.log(func());
-// }
+function printFunc(func){
+    var value = "value2";
+    console.log(func());
+}
 
-// printFunc(printValue)
+printFunc(printValue)
