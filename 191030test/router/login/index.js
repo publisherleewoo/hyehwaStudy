@@ -19,12 +19,11 @@ router.post("/",(req,res)=>{
     var email = req.body.email;
     var pw = req.body.pw;
     var selectTarget = [email,pw]
-    connection.query(`SELECT * FROM user where email = ? and pw = ?`, selectTarget, (err,rows) => {
+    connection.query(`SELECT * FROM user WHERE email = ? AND pw = ?`, selectTarget, (err,rows) => {
         if(err) throw err;
         if(rows){
-            console.log(rows[0])
-            var name = rows[0].name
-            res.render("main",{name})
+            console.log(rows)
+            res.render("main",rows[0])
         }
     })
 })

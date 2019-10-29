@@ -9,5 +9,11 @@
 <body>
     
     <h1><%= name %> 님 안녕하세요</h1>
+    <form action="/userInfo" method="post">
+     <input type="hidden" name="name" value=<%= uid %>>
+     <input type="hidden" name="name" value=<%= name %>>
+     <input type="hidden" name="email" value=<%= email %>>
+     <input type="submit" value="수정하러가기">
+    </form>
 </body>
 </html>

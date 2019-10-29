@@ -20,7 +20,7 @@ router.post("/",(req,res)=>{
     var name = req.body.name;
     var pw = req.body.pw;
     var insertsTarget = {name:name,email:email,pw:pw}
-    connection.query(`INSERT INTo user SET ?`, insertsTarget, (err,rows) => {
+    connection.query(`INSERT INTO user SET ?`, insertsTarget, (err,rows) => {
         if(err) throw err;
         if(rows){
               res.render("join",{insertId:rows.insertId})  
