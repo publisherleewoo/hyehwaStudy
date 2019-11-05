@@ -1,7 +1,14 @@
 import Login from "../components/contents/login/Login"
-import Board from '../components/contents/board/Board'
-import BoardDeail from '../components/contents/board/BoardDeail'
-import BoardWrite from '../components/contents/board/BoardWrite'
+import Mypage from "../components/contents/mypage/MyPage"
+
+import SecheduleBoard from '../components/contents/board/schedule/Board'
+import SecheduleBoardDeail from '../components/contents/board/schedule/BoardDeail'
+import SecheduleBoardWrite from '../components/contents/board/schedule/BoardWrite'
+
+import CodeBoard from '../components/contents/board/code/Board'
+import CodeBoardDeail from '../components/contents/board/code/BoardDeail'
+import CodeBoardWrite from '../components/contents/board/code/BoardWrite'
+
 
 
 const routes = [
@@ -10,17 +17,40 @@ const routes = [
         component: Login
     },
     {
-        path: "/board/write",
-        component: BoardWrite
+        path: "/mypage",
+        component: Mypage
+    },
+    /* /board/schedule */
+    {
+        path: "/board/schedule/write",
+        component: SecheduleBoardWrite
     },
     {
-        path: "/board/:id",
-        component: BoardDeail
+        path: "/board/schedule/:id",
+        component: SecheduleBoardDeail
     },
     {
-        path: "/board",
-        component: Board
+        path: "/board/schedule",
+        component: SecheduleBoard
     },
+    /* /board/code */
+    {
+        path: "/board/code/write",
+        component: CodeBoardWrite
+    },
+    {
+        path: "/board/code/:id",
+        component: CodeBoardDeail
+    },
+ 
+    {
+        path: "/board/code",
+        component: CodeBoard
+    },
+
+
+
+
   ];
 
 

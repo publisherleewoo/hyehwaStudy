@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import {Switch,Route} from "react-router-dom";
 import routes from "../../router/index"
 
@@ -14,15 +12,14 @@ function RouteWithSubRoutes(route) {
       />
     );
   }
-
-
+  
 const Contents = () => {
     return (
         <Switch>
             {routes.map((route, i) => (
                 <RouteWithSubRoutes key={i} {...route} />
             ))}
-      </Switch>
+       </Switch>
     );
 };
 
