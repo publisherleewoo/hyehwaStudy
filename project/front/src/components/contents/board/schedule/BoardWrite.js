@@ -1,6 +1,5 @@
-import React,{useState} from 'react';
-import ReactQuill from 'react-quill'; // ES6
-import 'react-quill/dist/quill.snow.css'; // ES6
+import React from 'react';
+
 
 import {
     Container,
@@ -16,18 +15,14 @@ import {
   /* react-quill */
 
 const BoardWrite = () => {
-  const [text,setText] = useState('');
-  const handleChange=(e)=>{
-    console.log(e)
-  }
+
 
   console.log("sechdule/BoardWrite")
     return (
         <> 
             <Header as='h3' content='schedule' style={style.h3} textAlign='center' />
             <Container>
-            <ReactQuill value={text}
-                    onChange={handleChange} />
+
             </Container>
         </>   
     );

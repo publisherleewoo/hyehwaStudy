@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 import {Link} from "react-router-dom";
 import {
   Container,
@@ -21,7 +21,7 @@ const style = {
   },
 }
 
-const Board = () => {
+const Board = memo(() => {
     console.log("code/Board")
     return (
         <>
@@ -37,6 +37,6 @@ const Board = () => {
         
         
     );
-};
+});
 
 export default Board;

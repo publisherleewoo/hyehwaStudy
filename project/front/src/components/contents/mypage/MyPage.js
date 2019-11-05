@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     Container,
-    Header,
-    Button
+    Header
   } from 'semantic-ui-react'
   
   const style = {
