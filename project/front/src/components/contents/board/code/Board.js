@@ -27,15 +27,11 @@ const Board = memo(() => {
         <>
             <Header as='h3' content='code' style={style.h3} textAlign='center' />
             <Container>
-
                 <DropDown></DropDown>
                 <BoardTable datas={codeDummyData}></BoardTable>
                 <Link to="/board/code/write"> <Button>글쓰기</Button></Link>
             </Container>
-           
-        </>
-        
-        
+        </>       
     );
 });
 

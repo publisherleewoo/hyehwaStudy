@@ -12,7 +12,6 @@ import {
   },
 }
   
-
 const BoardDeail = () => {
   console.log("code/BoardDetail")
     let {id}= parseInt(useParams())+1;

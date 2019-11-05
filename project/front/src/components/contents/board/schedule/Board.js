@@ -7,7 +7,7 @@ import {
 } from 'semantic-ui-react'
 import BoardTable from './BoardTable'
 import DropDown from '../DropDown'
-/* 스케쥴게시판, 코드게시판 2개로 쪼개기 */
+ 
 let scheduleDummyData=[
     {no:"0", category:"schedule",title:"스케쥴타이틀1",userNickName:"리우",userImgsrc:"",date:"20191101",likes:"20"},
     {no:"1", category:"schedule",title:"스케쥴타이틀2",userNickName:"LHW",userImgsrc:"",date:"20191103",likes:"40"},
@@ -28,14 +28,10 @@ const Board = () => {
             <Header as='h3' content='schedule' style={style.h3} textAlign='center' />
             <Container>
                 <DropDown></DropDown>
-
                 <BoardTable datas={scheduleDummyData}></BoardTable>
                 <Link to="/board/schedule/write"> <Button>글쓰기</Button></Link>
-            </Container>
-           
-        </>
-        
-        
+            </Container>    
+        </>         
     );
 };
 

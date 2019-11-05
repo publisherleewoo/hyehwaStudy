@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Quill from "../quill/Quill"
 
 import {
     Container,
@@ -22,7 +22,7 @@ const BoardWrite = () => {
         <> 
             <Header as='h3' content='schedule' style={style.h3} textAlign='center' />
             <Container>
-
+              <Quill></Quill>
             </Container>
         </>   
     );

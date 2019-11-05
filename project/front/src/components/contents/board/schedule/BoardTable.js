@@ -23,12 +23,11 @@ const BoardList = ({datas})=> {
                     </Table.Header>
 
                     <Table.Body>
-                        {/* 데이터 반복으로 돌릴부분 */}
+                        {/* 데이터 반복으로 돌릴부분 나중에 컴포넌트화*/}
                         {datas.map((data,index)=>{
                             return (
                                 <Table.Row key={index}>
                                 <Table.Cell>{parseInt(data.no)+1}</Table.Cell>
-                   
                                     <Table.Cell>
                                     <Link to={"/board/schedule/"+data.no}>
                                     <Header as='h4' image>
@@ -47,8 +46,7 @@ const BoardList = ({datas})=> {
                             </Table.Row>
                             )
                         })}
-                      
-                        {/* 데이터 반복으로 돌릴부분 */}
+                        {/* 데이터 반복으로 돌릴부분 나중에 컴포넌트화*/}
                     </Table.Body>
                 </Table>
               

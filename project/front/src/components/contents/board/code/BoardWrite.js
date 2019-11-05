@@ -1,5 +1,5 @@
 import React from 'react';
-import Quill from "../Quill"
+import Quill from "../quill/Quill"
 
 
 import {
