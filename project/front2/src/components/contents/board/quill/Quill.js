@@ -36,7 +36,7 @@ class Quill extends PureComponent{
         return(
          <>
             <ReactQuill ref={this.inputRef}/>
-            <Button onClick={this.clickHandler}>Show</Button>
+            <Button onClick={this.clickHandler}>전송</Button>
             <Confirm
                content='전송하시겠습니까?'
               open={this.state.open}

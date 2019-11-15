@@ -15,13 +15,13 @@ import {
   }
 
 
-
 const BoardWrite = () => {
 
 
    console.log("code/BoardWrite")
     return (
         <> 
+     
             <Header as='h3' content='codeWrite' style={style.h3} textAlign='center' />
             <Container>
                 <Quill></Quill>

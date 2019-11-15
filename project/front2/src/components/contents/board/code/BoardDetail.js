@@ -1,7 +1,6 @@
-import React from 'react';
+import React,{Component} from 'react';
 import Comment from './Comment';
 import Statistic from "./Statistic"
-import {useParams}  from "react-router-dom"; 
 import {
     Container,
     Header,
@@ -14,15 +13,33 @@ import {
     padding: '2em 0em',
   },
 }
+/* axios로 가져와서 뿌리기 */  
+var textCon  ='<p>dwqdwqdq<strong>wdqwd</strong>wqdwqdqwdwqd</p><p>dwqdwqdqdwq</p>';
+
+ 
+class BoardDeail extends Component {
   
-const BoardDeail = () => {
-  console.log("code/BoardDetail")
-    let id = parseInt(useParams().id)+1 + "번째 글"
+  constructor(props){
+    super(props)
+    this.state={
+      id:parseInt(props.match.params.id)+1+"번째 글"
+    }
+    
+  }
+
+  componentDidMount(){
+    /* 받아온값 입력 */
+    document.querySelector('.extra').innerHTML=textCon;
+  }
+
+
+  render(){
+
     return (
         <>
             <Container>
               <Statistic></Statistic>
-                <Header as='h3' content={id} style={style.h3} textAlign='center' />
+                <Header as='h3' content={this.id} style={style.h3} textAlign='center' />
                 <Item.Group>
                   <Item>
                     <Item.Image size='tiny' src='/images/wireframe/image.png' />
@@ -33,7 +50,9 @@ const BoardDeail = () => {
                       <Item.Description>
                       <Item.Extra>부가설명</Item.Extra>
                       </Item.Description>
-                      <Item.Extra>디테일. postId로 데이터가져옴</Item.Extra>
+                      <Item.Extra>
+                      </Item.Extra>
+                    
                     </Item.Content>
                   </Item>
                 </Item.Group>
@@ -43,6 +62,7 @@ const BoardDeail = () => {
            </Container>
         </>   
     );
+  }
 };
 
 export default BoardDeail;

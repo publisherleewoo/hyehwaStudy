@@ -11,6 +11,9 @@ import CodeBoardWrite from '../components/contents/board/code/BoardWrite'
 
 
 
+
+
+
 const routes = [
     {
         path: "/login",

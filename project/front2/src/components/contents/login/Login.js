@@ -1,7 +1,20 @@
 import React from 'react'
 import { Button, Form, Grid, Header,Message, Segment } from 'semantic-ui-react'
 
-const Login = () => (
+const login_process = {
+  facebook : "/api/auth/facebook",
+  google : "/api/auth/google",
+}
+
+const Login = (props) =>{
+
+  if(window.location.search){
+    var token = window.location.search.replace("?token=","");
+    localStorage.setItem("token",token)
+    props.history.push("/")  
+  }
+
+  return (
     <Grid textAlign='center' style={{ height: '60vh' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
         <Header as='h2' color='teal' textAlign='center'>
@@ -21,10 +34,10 @@ const Login = () => (
             <Button color='yellow' fluid size='large'>
               KaKao
             </Button>
-            <Button color='facebook' fluid size='large'>
+            <Button color='facebook' fluid size='large' href={login_process.facebook}>
               FaceBook
             </Button>
-            <Button color='google plus' fluid size='large'>
+            <Button color='google plus' fluid size='large' href={login_process.google}>
               Google
             </Button>
           </Segment>
@@ -34,6 +47,6 @@ const Login = () => (
         </Message>
       </Grid.Column>
     </Grid>
-  )
+  )}
 
 export default Login;
